@@ -1,1 +1,117 @@
+import * as React from 'react';
+import { View } from 'utopia-api';
+
+export var Playground = ({ style }) => {
+  const [currentPage, setCurrentPage] = React.useState('Home');
+
+  const renderContent = () => {
+    switch (currentPage) {
+      case 'Info':
+        return (
+          <div
+            style={{
+              padding: '40px',
+              textAlign: 'center',
+              maxWidth: '900px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              wordWrap: 'break-word',
+              fontFamily: 'Arial, sans-serif',
+              fontSize: '16px',
+            }}
+          >
+            <h1>TNT‑Bank: Beyond Proof-of-Work</h1>
+            <h2>Author: Joseph Mark Haykov</h2>
+            <p>
+              <strong>Executive Summary</strong><br />
+              TNT‑Bank is the first mathematically complete blockchain—designed to overcome the inherent inefficiencies of traditional systems.
+              It settles transactions in just two minutes, consumes negligible energy, and delivers security guarantees that far exceed those of Bitcoin.
+            </p>
+            <h3>Key Improvements:</h3>
+            <ul>
+              <li><strong>Superior Efficiency:</strong> Deterministic finality eliminates delay and reduces energy usage.</li>
+              <li><strong>Unparalleled Security:</strong> Dual-key approval replaces probabilistic consensus for stronger guarantees.</li>
+              <li><strong>Trustless Operation:</strong> Fully decentralized symmetric ledger.</li>
+              <li><strong>Energy Efficiency:</strong> Near-zero energy usage, fully aligned with modern sustainability goals.</li>
+            </ul>
+            <p><strong>A New Paradigm in Blockchain Technology</strong><br />
+            TNT‑Bank addresses Bitcoin’s core issues using synchronized batch processing and dual-key authorization—solving inefficiencies rather than masking them with mining.
+            </p>
+            <h3>Bitcoin’s Core Flaw: Satisficing Instead of Synchronization</h3>
+            <p>Bitcoin relies on computational work and lacks full visibility into pending transactions. TNT‑Bank uses synchronized finality to deliver true clarity.</p>
+            <h3>How TNT‑Bank Fixes This</h3>
+            <ul>
+              <li>Atomic Batch Processing</li>
+              <li>Bank-like reconciliation</li>
+              <li>Cryptographically guaranteed dual consent</li>
+            </ul>
+            <h3>TNT‑Bank: Solving, Not Satisficing</h3>
+            <p>Mathematically synchronized transactions eliminate ambiguity and enforce dual-signature verification for all transfers.</p>
+            <h3>Three Technical Pillars</h3>
+            <ol>
+              <li><strong>Atomic Visibility via Synchronized Batches:</strong> All nodes see and approve transactions before finality.</li>
+              <li><strong>Dual-Signature Enforcement:</strong> Cryptographic consent required by both sender and recipient.</li>
+              <li><strong>Deterministic Finality:</strong> Finality reached via universal Merkle root signing.</li>
+            </ol>
+            <h3>From Heuristics to Cryptographic Truth</h3>
+            <p>Bitcoin was an approximation. TNT‑Bank is the solution.</p>
+            <h2>The Financial System of the Future</h2>
+            <p>Security, speed, sustainability—TNT‑Bank delivers all without compromise.</p>
+            <h3>Transparent, Regulated, and Fact‑Based</h3>
+            <p>
+              TNT‑Bank adheres to SEC-grade standards. All claims are backed by cryptographic proof, not speculation. Even the math is peer-reviewable.
+            </p>
+            <p>
+              Example comparisons: <br />
+              - Meme coins like “Monkey Jizz” show the risk of hype-driven models. <br />
+              - TNT‑Bank provides measurable, transparent performance metrics.
+            </p>
+            <h3>Real-World Asset‑Backed Token: Bearer Water Bonds (BWBs)</h3>
+            <p>
+              <strong>What makes BWBs different?</strong>
+              <ul>
+                <li>Fractional ownership of real water rights</li>
+                <li>Redeemable for physical water</li>
+                <li>Fully blockchain-integrated</li>
+              </ul>
+            </p>
+            <h3>Why Water Matters</h3>
+            <p>
+              Most water investments—ETFs, derivatives—don’t provide physical access. BWBs do.
+            </p>
+            <h3>BWBs: Key Advantages</h3>
+            <ul>
+              <li>Direct access to natural water sources</li>
+              <li>Two-minute transaction finality</li>
+              <li>Physically redeemable in New Hampshire</li>
+              <li>Scalable and legally enforceable</li>
+            </ul>
+            <h2>Resources</h2>
+            <p>
+              - <a href="https://haykov.substack.com/p/formal-tnt-specs" target="_blank" rel="noopener noreferrer">Formal TNT Specification</a><br />
+              - <a href="https://haykov.substack.com/p/bwb" target="_blank" rel="noopener noreferrer">BWB White Paper</a><br />
+              - <a href="https://haykov.substack.com/p/water-bonds-white-paper" target="_blank" rel="noopener noreferrer">Low-Risk Investment Explained</a><br />
+              - <a href="https://haykov.substack.com/p/tnt-white-paper-667" target="_blank" rel="noopener noreferrer">Theory of TNT-Bank Money</a>
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+              TNT‑Bank merges trustless decentralization with real-world financial utility.<br />
+              Welcome to TNT‑Bank—where finance isn’t just decentralized, it’s deliberate.
+            </p>
+          </div>
+        );
+      default:
+        return (
+          <div style={{ padding: '40px', textAlign: 'center' }}>
+            <h1>Welcome to Utopia TNT Playground</h1>
+            <button onClick={() => setCurrentPage('Info')}>Learn About TNT-Bank</button>
+          </div>
+        );
+    }
+  };
+
+  return <View style={style}>{renderContent()}</View>;
+};
+
+export default Playground;
 
